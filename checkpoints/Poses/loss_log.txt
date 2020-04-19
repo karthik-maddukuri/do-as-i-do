@@ -1,0 +1,17 @@
+================ Training Loss (Sun Apr 19 03:17:38 2020) ================
+(epoch: 3, iters: 160, time: 0.581) G_GAN: 0.516 G_GAN_Feat: 2.504 G_VGG: 3.231 D_real: 0.218 D_fake: 0.554 
+(epoch: 6, iters: 80, time: 0.590) G_GAN: 0.458 G_GAN_Feat: 2.455 G_VGG: 2.191 D_real: 0.322 D_fake: 0.633 
+(epoch: 8, iters: 240, time: 0.583) G_GAN: 0.996 G_GAN_Feat: 1.838 G_VGG: 1.555 D_real: 0.771 D_fake: 0.308 
+(epoch: 11, iters: 160, time: 0.580) G_GAN: 0.523 G_GAN_Feat: 0.655 G_VGG: 1.777 D_real: 0.515 D_fake: 0.489 
+(epoch: 14, iters: 80, time: 0.580) G_GAN: 0.505 G_GAN_Feat: 0.469 G_VGG: 1.170 D_real: 0.498 D_fake: 0.500 
+(epoch: 16, iters: 240, time: 0.583) G_GAN: 0.498 G_GAN_Feat: 0.502 G_VGG: 1.175 D_real: 0.493 D_fake: 0.586 
+(epoch: 19, iters: 160, time: 0.582) G_GAN: 0.525 G_GAN_Feat: 1.509 G_VGG: 3.246 D_real: 0.474 D_fake: 0.646 
+(epoch: 22, iters: 80, time: 0.581) G_GAN: 0.390 G_GAN_Feat: 0.686 G_VGG: 1.247 D_real: 0.365 D_fake: 0.651 
+(epoch: 24, iters: 240, time: 0.580) G_GAN: 0.508 G_GAN_Feat: 0.736 G_VGG: 1.239 D_real: 0.462 D_fake: 0.496 
+(epoch: 27, iters: 160, time: 0.579) G_GAN: 0.443 G_GAN_Feat: 0.807 G_VGG: 1.131 D_real: 0.398 D_fake: 0.588 
+(epoch: 30, iters: 80, time: 0.584) G_GAN: 0.618 G_GAN_Feat: 0.826 G_VGG: 1.025 D_real: 0.538 D_fake: 0.415 
+(epoch: 32, iters: 240, time: 0.583) G_GAN: 0.646 G_GAN_Feat: 0.801 G_VGG: 0.983 D_real: 0.548 D_fake: 0.408 
+(epoch: 35, iters: 160, time: 0.584) G_GAN: 0.424 G_GAN_Feat: 0.764 G_VGG: 0.912 D_real: 0.395 D_fake: 0.603 
+(epoch: 38, iters: 80, time: 0.579) G_GAN: 0.501 G_GAN_Feat: 0.778 G_VGG: 0.826 D_real: 0.478 D_fake: 0.507 
+(epoch: 40, iters: 240, time: 0.585) G_GAN: 0.543 G_GAN_Feat: 0.785 G_VGG: 0.812 D_real: 0.569 D_fake: 0.468 
+================ Training Loss (Sun Apr 19 05:44:50 2020) ================
