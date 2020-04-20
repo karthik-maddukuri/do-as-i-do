@@ -38,7 +38,7 @@ tensorflow-gpu
 
 * `02_Make_target_OpenPose.ipynb` - The target subject was obtained from a [Sneha Desai Choreography](https://www.youtube.com/watch?v=etG1e8iPxzU). Repeat the same steps again as of Step 1. Now, the pose stick frames are saved in `data_transfer/test_A` and the real image frames are saved in `data_transfer/test_B`.
 
-* `03_Training.ipynb` - This is the initial training process and the parameters for the model can be set in `config/train_opt.py`. The entire duration for training the model depends on the number of images. In this case, the elapsed time was around **1 hr 17 min**. The results are saved in `checkpoints/Poses`. The html file in `checkpoints/Poses/web/index.html` can be used to visualize the poses in a better way. Try to open the html file in an editor for better visulaization.
+* `03_Training.ipynb` - This initial training process and the parameters for the model can be set in `config/train_opt.py`. The entire duration for training the model depends on the number of images. In this case, the elapsed time was around **1 hr 17 min**. The results are saved in `checkpoints/Poses`. The html file in `checkpoints/Poses/web/index.html` can be used to visualize the poses in a better way. Try to open the html file in an editor for better visulaization.
 
 * `04_Testing.ipynb` - This the cross validation step. It takes the images from `dataset_test/train_A`. We also see the results of losses in each epoch here.  The results of this notebook can be found in `checkpoints/Poses_test`. Similarly from the above step, preview the html file for better visualization.
 
@@ -58,6 +58,7 @@ tensorflow-gpu
 ![Trainingloss](references/Training_loss.png)
 
 * Cross-validated the model and the follwing are the mean losses:
+
 ![Cross-val-loss](references/mean_loss.png)
 
 ### Test Results  
