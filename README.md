@@ -73,6 +73,11 @@ tensorflow-gpu
 ### Final Results
 ![Final_Output](results/final_output.gif)  
 
+**We also included the link in to view the videos and poses for the source subject, target subject, and the final output video. Click [Here](https://drive.google.com/open?id=1zMPdNXnCKrvAfdy0fJ-rkMLG-qt5FYiB).**
+
+
+
+
 ## References
 - [Everybody Dance Now](https://arxiv.org/abs/1808.07371)
 - [nyoki-pytorch](https://github.com/nyoki-mtl/pytorch-EverybodyDanceNow) pytorch-EverybodyDanceNow
