@@ -73,7 +73,7 @@ tensorflow-gpu
 ### Final Results
 ![Final_Output](results/final_output.gif)  
 
-**We also included the link in to view the videos and poses for the source subject, target subject, and the final output video. Click [Here](https://drive.google.com/open?id=1zMPdNXnCKrvAfdy0fJ-rkMLG-qt5FYiB).**
+**We also included the link to view the videos and poses for the source subject, target subject, and the final output video. Click [Here](https://drive.google.com/open?id=1zMPdNXnCKrvAfdy0fJ-rkMLG-qt5FYiB).**
 
 
 
