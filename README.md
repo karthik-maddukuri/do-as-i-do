@@ -2,17 +2,17 @@
 
 ## Introduction
 
-We Implement a method for **do-as-i-do** motion transfer. Here, we extract poses from the source subject and transfer them to a target subject by learning a video to video translation model. 
+We implement a method for **do-as-i-do** motion transfer. Here, we extract poses from the source subject and transfer them to a target subject by learning a video to video translation model. 
 To obtain the body poses of subjects, we use pre-trained pose detector - [**OpenPose**](https://github.com/CMU-Perceptual-Computing-Lab/openpose). OpenPose detects human body, hand, facial, and foot keypoints on single images.
 
 ## Implementation
 
-The following images shows the overview of pose detection and transfer:
+The following image shows the overview of pose detection and transfer:
 
 ![model_image](references/model.png)
 
 #### Training
-In the initial training process, we convert the subject to a pose stick-like figure using OpenPose (P). Then, we learn the mapping using Generator (G) and a Discriminator (D) to separate the Real sequences from fake sequences. We have used a type of CGAN (**pix2pix**) developed by NVIDEA for transforming the image from one domain to another. 
+In the initial training process, we convert the subject to a pose stick-like figure using OpenPose (P). Then, we learn the mapping using Generator (G) and a Discriminator (D) to separate the real sequences from fake sequences. We have used a type of CGAN (**pix2pix**) developed by NVIDEA for transforming the image from one domain to another. 
 
 #### Pose Transfer
 
@@ -34,21 +34,22 @@ tensorflow-gpu
 ```
 ### Running the Google Colab Notebooks
 
-* `01_Make_Source_OpenPose.ipynb` - The dataset was procured from a [Shuffle Step dance video](https://www.youtube.com/watch?v=1SKa4L8J21o). Build *OpenPose* and convert source video to pose stick video. Convert both the videos to image frames and save them. The pose stick frames are saved in `data/train_A` and the real image frames are saved in `data/train_B`. **Note**: If your train_A contains images with multiple classes please follow the instructions as given in pix2pixHD repository.
+* `01_Make_Source_OpenPose.ipynb` - The source of the dataset is [Shuffle Step dance video](https://www.youtube.com/watch?v=1SKa4L8J21o). Build *OpenPose* and convert source video to pose stick video. Convert both the videos to image frames and save them. The pose stick frames are saved in `data/train_A` and the real image frames are saved in `data/train_B`. 
+**Note**: If your train_A contains images with multiple classes please follow the instructions as given in pix2pixHD repository.
 
-* `02_Make_target_OpenPose.ipynb` - The target subject was obtained from a [Sneha Desai Choreography](https://www.youtube.com/watch?v=etG1e8iPxzU). Repeat the same steps again as of Step 1. Now, the pose stick frames are saved in `data_transfer/test_A` and the real image frames are saved in `data_transfer/test_B`.
+* `02_Make_target_OpenPose.ipynb` - The source of the target subject is [Choreography](https://www.youtube.com/watch?v=etG1e8iPxzU). Repeat the same steps again as of Step 1. Now, the pose stick frames are saved in `data_transfer/test_A` and the real image frames are saved in `data_transfer/test_B`.
 
-* `03_Training.ipynb` - This initial training process and the parameters for the model can be set in `config/train_opt.py`. The entire duration for training the model depends on the number of images. In this case, the elapsed time was around **1 hr 17 min**. The results are saved in `checkpoints/Poses`. The html file in `checkpoints/Poses/web/index.html` can be used to visualize the poses in a better way. Try to open the html file in an editor for better visulaization.
+* `03_Training.ipynb` - The initial training process and the parameters for the model can be set in `config/train_opt.py`. The entire duration for training the model depends on the number of images. In this case, the elapsed time was around **1 hr 17 min**. The results are saved in `checkpoints/Poses`. The html file in `checkpoints/Poses/web/index.html` can be used to visualize the poses in a better way. Try to open the html file in an editor for better visulaization.
 
-* `04_Testing.ipynb` - This the cross validation step. It takes the images from `dataset_test/train_A`. We also see the results of losses in each epoch here.  The results of this notebook can be found in `checkpoints/Poses_test`. Similarly from the above step, preview the html file for better visualization.
+* `04_Testing.ipynb` - We perform cross-validation here. It takes the images from `dataset_test/train_A`. We also see the results of losses in each epoch here.  The results of this notebook can be found in `checkpoints/Poses_test`. Similarly from the above step, preview the html file for better visualization.
 
-* `05_Pose_Transfer.ipynb` - Here, we finally trasnfer the input pose labels to the target image. The results are saved in `results/Poses`. Similarly, use a text editor to preview the results. There is also `results/Poses/images` folder where the input label and the corresponding synthesized output image can be viewed. 
+* `05_Pose_Transfer.ipynb` - Here, we finally transfer the input pose labels to the target image. The results are saved in `results/Poses`. Similarly, use a text editor to preview the results. There is also a `results/Poses/images` folder where the input label and the corresponding synthesized output image can be viewed. 
 
 * `06_Final_Output_Video.ipynb` - Since all the synthesized output poses are image frames, we convert these frames back to a video using VideoWriter. 
 
 ## Results
 
-### OpenPose results -- stick-like figures
+### OpenPose results － stick-like figures
 
 ![openpose](references/Pose_stick.png)
 
@@ -57,7 +58,7 @@ tensorflow-gpu
 * The training is done stochasitcally  where the outcome involves some randomness and has some uncertainity. 
 ![Trainingloss](references/Training_loss.png)
 
-* Cross-validated the model and the follwing are the mean losses:
+* Cross-validated the model and the following are the mean losses:
 
 ![Cross-val-loss](references/mean_loss.png)
 
