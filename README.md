@@ -12,7 +12,7 @@ The following image shows the overview of pose detection and transfer:
 ![model_image](references/model.png)
 
 #### Training
-In the initial training process, we convert the subject to a pose stick-like figure using OpenPose (P). Then, we learn the mapping using Generator (G) and a Discriminator (D) to separate the real sequences from fake sequences. We have used a type of CGAN (**pix2pix**) developed by NVIDEA for transforming the image from one domain to another. 
+In the initial training process, we convert the subject to a pose stick-like figure using OpenPose (P). Then, we learn the mapping using a Generator (G) and a Discriminator (D) to separate the real sequences from fake sequences. We have used a type of CGAN (**pix2pix**) for transforming the image from one domain to another. 
 
 #### Pose Transfer
 
@@ -34,7 +34,7 @@ tensorflow-gpu
 ```
 ### Running the Google Colab Notebooks
 
-* `01_Make_Source_OpenPose.ipynb` - The source of the dataset is [Shuffle Step dance video](https://www.youtube.com/watch?v=1SKa4L8J21o). Build *OpenPose* and convert source video to pose stick video. Convert both the videos to image frames and save them. The pose stick frames are saved in `data/train_A` and the real image frames are saved in `data/train_B`. 
+* `01_Make_Source_OpenPose.ipynb` - The source of the dataset is [Shuffle Step dance video](https://www.youtube.com/watch?v=1SKa4L8J21o). Build *OpenPose* and convert the source video to a pose stick video. Convert both the videos to image frames and save them. The pose stick frames are saved in `data/train_A` and the real image frames are saved in `data/train_B`. 
 **Note**: If your train_A contains images with multiple classes please follow the instructions as given in pix2pixHD repository.
 
 * `02_Make_target_OpenPose.ipynb` - The source of the target subject is [Choreography](https://www.youtube.com/watch?v=etG1e8iPxzU). Repeat the same steps again as of Step 1. Now, the pose stick frames are saved in `data_transfer/test_A` and the real image frames are saved in `data_transfer/test_B`.
